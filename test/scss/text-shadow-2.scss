@@ -1,0 +1,5 @@
+@import "compass/css3/text-shadow";
+
+.color-first-with-params { @include single-text-shadow(#ccc, 2px, 2px, 5px, 2px);}
+.color-last-with-params { @include single-text-shadow(2px, 2px, 5px, 2px, #ccc);}
+.multiple-text-shadows-with-spread { @include text-shadow(4px 4px 10px 1px #444, 2px 2px 5px 3px #222);}

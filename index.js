@@ -48,7 +48,7 @@ function render(file, opts) {
       data
     ].join('\n');
 
-    sass.renderSync(merge(param, opts, [
+    var result = sass.renderSync(merge(param, opts, [
       'success',
       'error',
       'imagePath',
@@ -58,6 +58,8 @@ function render(file, opts) {
       'sourceMap',
       'stats'
     ]));
+
+    opts.onResult(result);
   });
 }
 

@@ -5,10 +5,11 @@ var Scss = require('../lib/scss')
   , compareLine = require('./lib/compareLine');
 
 describe('scss', function () {
+  /*
   describe('import', function () {
     it('should xxx', function (done) {
       new Scss(
-        fs.readFileSync(path.join(__dirname, './engine/import.scss'), { encoding: 'utf8' }), 
+        fs.readFileSync(path.join(__dirname, './engine/import.scss'), { encoding: 'utf8' }),
         {
           includePaths: [path.join(__dirname, './engine')]
         }
@@ -22,7 +23,7 @@ describe('scss', function () {
   describe('nested import', function () {
     it('should xxx', function (done) {
       new Scss(
-        fs.readFileSync(path.join(__dirname, './engine/nested-import.scss'), { encoding: 'utf8' }), 
+        fs.readFileSync(path.join(__dirname, './engine/nested-import.scss'), { encoding: 'utf8' }),
         {
           includePaths: [path.join(__dirname, './engine')]
         }
@@ -102,4 +103,5 @@ describe('scss', function () {
       })
     });
   })
+  */
 });

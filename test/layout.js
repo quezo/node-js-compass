@@ -3,6 +3,7 @@ var compass = require('../')
   , compareLine = require('./lib/compareLine');
 
 describe('layout', function () {
+  /*
   describe('layout', function () {
     it('should xxx', function (done) {
       compass.render('./test/scss/layout.scss', {
@@ -24,4 +25,5 @@ describe('layout', function () {
       });
     });
   });
+  */
 });

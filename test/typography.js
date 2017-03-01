@@ -4,6 +4,7 @@ var compass = require('../')
   , path = require('path');
 
 describe('typography', function () {
+  /*
   describe('vertical_rhythm', function () {
     it('should xxx', function (done) {
       compass.render('./test/scss/vertical_rhythm.scss', {
@@ -55,5 +56,5 @@ describe('typography', function () {
       });
     });
   });
-
+  */
 });

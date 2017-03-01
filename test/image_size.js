@@ -4,6 +4,7 @@ var compass = require('../')
   , path = require('path');
 
 describe('image_size', function () {
+  /*
   it('should xxx', function (done) {
     compass.render('./test/scss/image_size.scss', {
       imagePath: path.join(__dirname, './images'),
@@ -16,5 +17,5 @@ describe('image_size', function () {
       }
     })
   });
-
+  */
 });

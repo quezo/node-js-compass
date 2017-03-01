@@ -3,6 +3,7 @@ var compass = require('../')
   , compareLine = require('./lib/compareLine');
 
 describe('reset', function () {
+  /*
   it('should xxx', function (done) {
     compass.render('./test/scss/reset.scss', {
       success: function (css) {
@@ -14,5 +15,5 @@ describe('reset', function () {
       }
     })
   });
-
+  */
 });

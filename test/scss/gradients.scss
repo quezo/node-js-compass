@@ -90,7 +90,7 @@ $experimental-support-for-svg: true;
   @include content(radial-gradient(lime, red 10px));
 }
 
-$experimental-support-for-svg: false
+$experimental-support-for-svg: false;
 
 .bg-linear-gradient-no-position {
   @include background-image(linear-gradient(#ddd, #aaa));
