@@ -1,3 +1,5 @@
+@import "compass/support";
+
 // Indicates the direction you prefer to move your text
 // when hiding it.
 //
@@ -31,11 +33,11 @@ $hide-text-direction: left !default;
 // and height of the element according the dimensions of the image.
 //
 // If you set `$inline` to true, then an inline image (data uri) will be used.
-// @mixin replace-text-with-dimensions($img, $x: 50%, $y: 50%, $inline: false) {
-//   @include replace-text(if($inline, inline-image($img), $img), $x, $y);
-//   width: image-width($img);
-//   height: image-height($img);
-// }
+@mixin replace-text-with-dimensions($img, $x: 50%, $y: 50%, $inline: false) {
+  @include replace-text(if($inline, inline-image($img), $img), $x, $y);
+  width: image-width($img);
+  height: image-height($img);
+}
 
 // Hides text in an element so you can see the background.
 //
@@ -47,7 +49,7 @@ $hide-text-direction: left !default;
   @if $direction == left {
     $approximate-em-value: 12px / 1em;
     $wider-than-any-screen: -9999em;
-    text-indent: strip-units($wider-than-any-screen * $approximate-em-value) * 1px;
+    text-indent: $wider-than-any-screen * $approximate-em-value;
     overflow: hidden;
     text-align: left;
   } @else {
@@ -55,6 +57,10 @@ $hide-text-direction: left !default;
     text-indent: 110%;
     white-space: nowrap;
     overflow: hidden;
+  }
+  @include for-legacy-browsers((ie: "7"), $critical-usage-threshold) {
+    //Text transform capitalize fixes text-replacement issue when used in a <button> element on ie7
+    text-transform:capitalize;
   }
 }
 
