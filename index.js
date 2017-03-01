@@ -34,8 +34,8 @@ function render(file, opts) {
     };
 
   new Scss(data, {
-    includePaths: opts.includePaths ? 
-      includePaths.concat(opts.includePaths) : 
+    includePaths: opts.includePaths ?
+      includePaths.concat(opts.includePaths) :
         includePaths,
     spriteDist: spriteDist,
     imagePath: imagePath
@@ -46,9 +46,9 @@ function render(file, opts) {
       '$compass-image-path : "' + _fixPath(image) + '";',
       '@import "compass-prefix";',
       data
-    ].join('\n'); 
+    ].join('\n');
 
-    sass.render(merge(param, opts, [
+    sass.renderSync(merge(param, opts, [
       'success',
       'error',
       'imagePath',
