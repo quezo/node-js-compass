@@ -3,10 +3,11 @@ node-js-compass
 
 Node.js version of Compass
 
-> This is a Compass preprocessor to convert Compass `.scss` files to general
-sass files that [node-sass](https://github.com/sass/node-sass) can compile.
-Because **node-sass** doesn't support custom functions (custom imports) that
-come with Compass, we use some Node.js magic to compensate.
+> This is a [Compass](https://github.com/Compass/compass) preprocessor to
+convert Compass `.scss` files to general sass files that
+[node-sass](https://github.com/sass/node-sass) can compile. Because
+**node-sass** doesn't support custom functions (custom imports) that come with
+**Compass**, we use some Node.js magic to compensate.
 
 Install
 -------
