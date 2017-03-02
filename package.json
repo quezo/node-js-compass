@@ -1,14 +1,35 @@
 {
-  "name": "compass-node",
-  "repository": "git://github.com/miniflycn/node-compass.git",
-  "version": "0.1.6",
-  "description": "compass-node",
+  "name": "node-js-compass",
+  "version": "1.0.0",
+  "description": "Node.js version of Compass",
+  "author": {
+    "name": "Daniel Yang",
+    "email": "miniflycn@justany.net",
+    "url": "https://github.com/miniflycn"
+  },
+  "contributors": [{
+    "name": "Valera Rozuvan",
+    "email": "valera.rozuvan@gmail.com",
+    "url": "https://github.com/valera-rozuvan"
+  }],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valera-rozuvan/node-js-compass.git"
+  },
   "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "files": [
     "index.js",
     "lib/**/*.js",
     "frameworks/**"
   ],
+  "devDependencies": {
+    "mocha": "3.2.0",
+    "should": "11.2.0"
+  },
   "dependencies": {
     "datauri": "1.0.5",
     "each-series": "1.0.0",
@@ -18,14 +39,5 @@
     "spritesmith": "2.0.1",
     "utils-merge": "1.0.0",
     "pixelsmith": "2.1.1"
-  },
-  "devDependencies": {
-    "mocha": "3.2.0",
-    "should": "11.2.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "author": "",
-  "license": "MIT"
+  }
 }

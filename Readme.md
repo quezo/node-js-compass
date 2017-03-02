@@ -1,20 +1,23 @@
-[![Build Status](https://travis-ci.org/miniflycn/compass-node.svg?branch=master)](https://travis-ci.org/miniflycn/compass-node)
-[![Coverage Status](https://coveralls.io/repos/miniflycn/node-compass/badge.png)](https://coveralls.io/r/miniflycn/node-compass)
-compass-node
-============
+node-js-compass
+===============
 
-> This is a Compass preprocessor to convert stylesheets to general sass and let node-sass can compile. Because node-sass doesn't support custom function & custom import, we just use a ugly way to finish it.
+Node.js version of Compass
+
+> This is a Compass preprocessor to convert Compass `.scss` files to general
+sass files that [node-sass](https://github.com/sass/node-sass) can compile.
+Because **node-sass** doesn't support custom functions (custom imports) that
+come with Compass, we use some Node.js magic to compensate.
 
 Install
 -------
 
-> $ npm install compass-node
+> $ npm install node-js-compass
 
 Usage
 -----
 
 ```javascript
-var compass = require('compass-node');
+var compass = require('node-js-compass');
 
 /**
  * render
@@ -22,9 +25,9 @@ var compass = require('compass-node');
  * @param {Object} options
  */
 compass.render('./test.scss', {
-  success: function (css) {
+  onResult: function(result) {
     // the result string
-    console.log(css);
+    console.log(result.css.toString());
   }
 });
 ```
@@ -36,17 +39,9 @@ Options
 
 `data` is a String containing the scss to be rendered by compass.
 
-#### success
-
-`success` is a `Function` to be called upon successful rendering of the scss to css.
-
-#### error
-
-`error` is a `Function` to be called upon occurance of an error when rendering the scss to css. 
-
 #### includePaths
 
-`includePaths` is an `Array` of path Strings to look for any @imported files. 
+`includePaths` is an `Array` of path Strings to look for any @imported files.
 
 #### httpImagesPath
 
@@ -71,16 +66,10 @@ Options
 
 `spriteDist` is a `String` that represents the image sprites' path.
 
-Plugins for build system
-------------------------
-
-* [grunt-compassn](https://github.com/miniflycn/grunt-compassn)
-* [gulp-compassn](https://github.com/miniflycn/gulp-compassn)
-
 License
 ---------
-(The MIT License)
 
+The MIT License. See [LICENSE](LICENSE) for details.
 Copyright (c) 2013 Daniel Yang <miniflycn@justany.net>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
