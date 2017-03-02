@@ -1,26 +1,30 @@
 .clearfix {
+  overflow: hidden; }
+
+.pie-clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
   overflow: hidden;
-  display: inline-block; }
-  .clearfix {
-    display: block; }
+  visibility: hidden; }
+
+.simplified-pie-clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.simplified-pie-clearfix {
+  display: block; }
+
+.clearfix {
+  display: block; }
 
 .pie-clearfix {
   display: inline-block; }
-  .pie-clearfix:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    overflow: hidden;
-    visibility: hidden; }
-  .pie-clearfix {
-    display: block; }
+
+.pie-clearfix {
+  display: block; }
 
 .simplified-pie-clearfix {
   display: inline-block; }
-  .simplified-pie-clearfix:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .simplified-pie-clearfix {
-    display: block; }

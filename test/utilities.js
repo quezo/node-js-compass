@@ -15,7 +15,7 @@ describe('utilities', function() {
     });
   });
 
-  /*
+
   describe('legacy_clearfix', function() {
     it('should xxx', function(done) {
       compass.render('./test/scss/legacy_clearfix.scss', {
@@ -27,15 +27,14 @@ describe('utilities', function() {
     });
   });
 
-  describe('print', function () {
-    it('should xxx', function (done) {
+  describe('print', function() {
+    it('should xxx', function(done) {
       compass.render('./test/scss/print.scss', {
-        success: function (css) {
-          compareLine(css.css, './test/css/print.css');
+        onResult: function(result) {
+          compareLine(result.css.toString(), './test/css/print.css');
           done();
         }
       });
     });
   });
-  */
 });

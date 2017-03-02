@@ -1,8 +1,8 @@
-var sass = require('node-sass')
-  , fs = require('fs')
-  , path = require('path')
-  , merge = require('./lib/merge')
-  , Scss = require('./lib/scss');
+var sass = require('node-sass'),
+  fs = require('fs'),
+  path = require('path'),
+  merge = require('./lib/merge'),
+  Scss = require('./lib/scss');
 
 function _fixPath(path) {
   if (!/\/$/.test(path)) {
@@ -22,24 +22,25 @@ function _fixPath(path) {
  */
 function render(file, opts) {
   opts = opts || {};
-  var data = opts.data || fs.readFileSync(file, { encoding: 'utf8' })
-    , includePaths = [path.dirname(file)]
-    , css = opts.css || 'css'
-    , font = opts.font || 'font'
-    , imagePath = opts.imagePath || '/images'
-    , image = opts.httpImagesPath || '/images'
-    , spriteDist = opts.spriteDist || '/images'
-    , param = {
+  var data = opts.data || fs.readFileSync(file, {
+      encoding: 'utf8'
+    }),
+    includePaths = [path.dirname(file)],
+    css = opts.css || 'css',
+    font = opts.font || 'font',
+    imagePath = opts.imagePath || '/images',
+    image = opts.httpImagesPath || '/images',
+    spriteDist = opts.spriteDist || '/images',
+    param = {
       includePaths: [path.join(__dirname, 'frameworks/stylesheets')]
     };
 
   new Scss(data, {
     includePaths: opts.includePaths ?
-      includePaths.concat(opts.includePaths) :
-        includePaths,
+      includePaths.concat(opts.includePaths) : includePaths,
     spriteDist: spriteDist,
     imagePath: imagePath
-  }).done(function (data) {
+  }).done(function(data) {
     param.data = [
       '$compass-font-path : "' + _fixPath(font) + '";',
       '$compass-stylesheet-path : "' + _fixPath(css) + '";',
