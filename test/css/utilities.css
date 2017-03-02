@@ -1,27 +1,22 @@
 .clearfix {
+  overflow: hidden; }
+
+.pie-clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
   overflow: hidden;
-  *zoom: 1; }
+  visibility: hidden; }
 
-.pie-clearfix {
-  *zoom: 1; }
-  .pie-clearfix:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    overflow: hidden;
-    visibility: hidden; }
-
-.simple-pie-clearfix {
-  *zoom: 1; }
-  .simple-pie-clearfix:after {
-    content: "";
-    display: table;
-    clear: both; }
+.simple-pie-clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 p.light {
   background-color: #b0201e;
-  color: #000; }
+  color: #fff; }
 
 p.dark {
   background-color: #5f1210;
@@ -29,11 +24,11 @@ p.dark {
 
 p.light-with-args {
   background-color: #b0201e;
-  color: green; }
+  color: blue; }
 
 p.dark-with-args {
   background-color: #5f1210;
-  color: blue; }
+  color: green; }
 
 th {
   background-color: white; }
@@ -54,3 +49,9 @@ tfoot th, tfoot td {
   background-color: white; }
   tfoot th.even, tfoot th:nth-child(2n), tfoot td.even, tfoot td:nth-child(2n) {
     background-color: yellow; }
+
+.pie-clearfix {
+  *zoom: 1; }
+
+.simple-pie-clearfix {
+  *zoom: 1; }
